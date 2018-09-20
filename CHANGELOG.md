@@ -13,5 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - license info to composer.json
 
-## [1.0.0] - 2018-09-20
+## 1.0.0 - 2018-09-20
 Initial release
+
+[1.0.2]: https://github.com/InspireCZ/coding-standard/compare/1.0.2..1.0.1
+[1.0.1]: https://github.com/InspireCZ/coding-standard/compare/1.0.1..1.0.0
