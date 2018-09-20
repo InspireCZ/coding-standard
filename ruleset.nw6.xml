@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="INSPIRE CZ PHP Coding Standard">
-    <config name="installed_paths" value="./../../inspire/coding-standard-sniffs,./../../slevomat/coding-standard"/>
+    <config name="installed_paths" value="./../../inspirecz/coding-standard-sniffs,./../../slevomat/coding-standard"/>
 
     <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
     <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
@@ -101,7 +101,7 @@
     </rule>
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
 
-    <rule ref="Inspire.ControlStructures.YodaConditions"/>
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
     <rule ref="Inspire.Methods.DisallowTracyDumpMethods"/>
 
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
