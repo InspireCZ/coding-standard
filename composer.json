@@ -2,6 +2,7 @@
     "type": "library",
     "name": "inspirecz/coding-standard",
     "description": "INSPIRE Coding Standard",
+    "license": "MIT",
     "keywords": [
         "coding standard",
         "php",
