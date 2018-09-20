@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="INSPIRE CZ PHP Coding Standard">
+    <rule ref="./ruleset.xml" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEmpty" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEqualOperators" />
+    <rule ref="SlevomatCodingStandard.PHP.ShortList" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes" />
+</ruleset>
