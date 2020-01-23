@@ -113,7 +113,7 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" type="int" value="0"/>
             <property name="linesCountBeforeClosingBrace" type="int" value="0"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="INSPIRE CZ PHP Coding Standard">
-    <config name="installed_paths" value="./../../inspirecz/coding-standard-sniffs,./../../slevomat/coding-standard"/>
+    <config name="installed_paths" value="./../../inspirecz/coding-standard-sniffs,./../../slevomat/coding-standard" />
 
     <rule ref="Generic.CodeAnalysis.JumbledIncrementer" />
     <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
@@ -37,6 +37,7 @@
     </rule>
 
     <rule ref="PEAR.Classes.ClassDeclaration" />
+    <rule ref="PEAR.Functions.FunctionDeclaration.BraceOnSameLine" />
     <rule ref="PEAR.Functions.ValidDefaultValue" />
     <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
 
@@ -46,11 +47,13 @@
 
     <rule ref="MySource.PHP.EvalObjectFactory" />
 
+    <rule ref="Squiz.Classes.SelfMemberReference" />
+    <rule ref="Squiz.Operators.ValidLogicalOperators" />
     <rule ref="Squiz.PHP.Eval" />
     <rule ref="Squiz.PHP.GlobalKeyword" />
+    <rule ref="Squiz.PHP.InnerFunctions" />
     <rule ref="Squiz.PHP.LowercasePHPFunctions" />
     <rule ref="Squiz.PHP.NonExecutableCode" />
-    <rule ref="Squiz.PHP.InnerFunctions" />
     <rule ref="Squiz.Scope.MemberVarScope" />
     <rule ref="Squiz.Scope.MethodScope" />
     <rule ref="Squiz.Scope.StaticThisUsage" />
@@ -62,8 +65,6 @@
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace" />
     <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing" />
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
-    <rule ref="Squiz.Classes.SelfMemberReference" />
-    <rule ref="Squiz.Operators.ValidLogicalOperators" />
     <rule ref="Squiz.Operators.IncrementDecrementUsage">
         <exclude name="Squiz.Operators.IncrementDecrementUsage.NoBrackets" /><!-- afaik there is no need for brackets -->
     </rule>
@@ -97,41 +98,92 @@
     </rule>
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
 
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
-    <rule ref="Inspire.ControlStructures.BlankLines"/>
-    <rule ref="Inspire.Methods.BlankLinesBeforeReturn"/>
-    <rule ref="Inspire.Methods.DisallowTracyDumpMethods"/>
-    <rule ref="Inspire.Classes.EmptyInterface"/>
+    <rule ref="Inspire.ControlStructures.BlankLines" />
+    <rule ref="Inspire.Methods.BlankLinesBeforeReturn" />
+    <rule ref="Inspire.Methods.DisallowTracyDumpMethods" />
+    <rule ref="Inspire.Classes.EmptyInterface" />
 
-    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
-    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
-            <property name="spacesCountBeforeColon" type="int" value="0"/>
+            <property name="spacesCountBeforeColon" type="int" value="0" />
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
-            <property name="linesCountAfterOpeningBrace" type="int" value="0"/>
-            <property name="linesCountBeforeClosingBrace" type="int" value="0"/>
+            <property name="linesCountAfterOpeningBrace" type="int" value="0" />
+            <property name="linesCountBeforeClosingBrace" type="int" value="0" />
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
+
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
+    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+    <rule ref="SlevomatCodingStandard.Classes.PropertySpacing" />
+    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements" />
+    <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
+        <properties>
+            <property name="groups" type="array">
+                <element value="uses" />
+                <element value="public constants" />
+                <element value="protected constants" />
+                <element value="private constants" />
+
+                <element value="public static properties" />
+                <element value="protected static properties" />
+                <element value="private static properties" />
+
+                <element value="public properties" />
+                <element value="protected properties" />
+                <element value="private properties" />
+
+
+                <element value="constructor, static constructors" />
+                <element value="destructor" />
+
+                <element value="public abstract methods" />
+                <element value="protected abstract methods" />
+
+                <element value="public static methods, protected static methods, private static methods, public methods, protected methods, private methods, magic methods" />
+            </property>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.EmptyComment" />
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.InvalidCommentType" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator" />
+    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
+    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
+    <rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants" />
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions" />
+    <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine" />
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias" />
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
         <properties>
-            <property name="searchAnnotations" type="bool" value="true"/>
+            <property name="searchAnnotations" type="bool" value="true" />
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
-    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
-    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
-    <rule ref="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
+    <rule ref="SlevomatCodingStandard.PHP.ShortList" />
+    <rule ref="SlevomatCodingStandard.PHP.TypeCast" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
+    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint" />
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
+        <properties>
+            <property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" type="bool" value="true" />
+        </properties>
+    </rule>
 </ruleset>
