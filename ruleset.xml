@@ -101,6 +101,7 @@
     <rule ref="Inspire.ControlStructures.BlankLines"/>
     <rule ref="Inspire.Methods.BlankLinesBeforeReturn"/>
     <rule ref="Inspire.Methods.DisallowTracyDumpMethods"/>
+    <rule ref="Inspire.Classes.EmptyInterface"/>
 
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
     <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
