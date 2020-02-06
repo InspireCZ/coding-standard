@@ -142,7 +142,9 @@
                 <element value="constructor, static constructors" />
                 <element value="destructor" />
 
+                <element value="public static abstract methods" />
                 <element value="public abstract methods" />
+                <element value="protected static abstract methods" />
                 <element value="protected abstract methods" />
 
                 <element value="public static methods, protected static methods, private static methods, public methods, protected methods, private methods, magic methods" />
