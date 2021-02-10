@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=8.0",
         "squizlabs/php_codesniffer": "^3.2",
         "inspirecz/coding-standard-sniffs": "^1.0",
         "slevomat/coding-standard": "6.1.*"
