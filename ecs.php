@@ -436,7 +436,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(UnusedInheritedVariablePassedToClosureSniff::class);
     $services->set(DisallowGroupUseSniff::class);
 //    $services->set(FullyQualifiedGlobalConstantsSniff::class); temporarily turned off because it doesn't work properly
-    $services->set(FullyQualifiedGlobalFunctionsSniff::class);
+//    $services->set(FullyQualifiedGlobalFunctionsSniff::class); temporarily turned off because it doesn't work properly (breaks property attributes) 
     $services->set(UselessAliasSniff::class);
     $services->set(StrictParamFixer::class);
     $services->set(DeclareStrictTypesFixer::class);
