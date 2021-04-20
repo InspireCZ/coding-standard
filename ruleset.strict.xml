@@ -6,5 +6,10 @@
     <rule ref="SlevomatCodingStandard.PHP.ShortList" />
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
     <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes" />
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="declareOnFirstLine" value="true" />
+            <property name="linesCountBeforeDeclare" value="0" />
+        </properties>
+    </rule>
 </ruleset>
