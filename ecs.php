@@ -180,7 +180,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(NewWithBracesFixer::class);
     $services->set(ClassDefinitionFixer::class)
         ->call('configure', [[
-            'singleLine' => true,
+            'single_line' => true,
         ]]);
 
     $services->set(StandardizeIncrementFixer::class);
@@ -225,7 +225,12 @@ return static function(ContainerConfigurator $containerConfigurator): void {
 
     $services->set(ClassAttributesSeparationFixer::class)
         ->call('configure', [[
-            'elements' => ['const', 'property', 'method'],
+            'elements' => [
+                'const' => ClassAttributesSeparationFixer::SPACING_ONE,
+                'property' => ClassAttributesSeparationFixer::SPACING_ONE,
+                'method' => ClassAttributesSeparationFixer::SPACING_ONE,
+                'trait_import' => ClassAttributesSeparationFixer::SPACING_NONE
+            ],
         ]]);
 
     $services->set(ConcatSpaceFixer::class)
@@ -315,7 +320,11 @@ return static function(ContainerConfigurator $containerConfigurator): void {
             'spacing' => 'one',
         ]]);
 
-    $services->set(DeclareEqualNormalizeFixer::class);
+    $services->set(DeclareStrictTypesFixer::class);
+    $services->set(DeclareEqualNormalizeFixer::class)
+        ->call('configure', [[
+            'space' => 'none',
+        ]]);
     $services->set(ElseifFixer::class);
     $services->set(EncodingFixer::class);
     $services->set(FullyQualifiedStrictTypesFixer::class);
@@ -438,5 +447,4 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(FullyQualifiedGlobalFunctionsSniff::class);
     $services->set(UselessAliasSniff::class);
     $services->set(StrictParamFixer::class);
-    $services->set(DeclareStrictTypesFixer::class);
 };
