@@ -29,7 +29,6 @@ use PhpCsFixer\Fixer\ArrayNotation\NoMultilineWhitespaceAroundDoubleArrowFixer;
 use PhpCsFixer\Fixer\ArrayNotation\NormalizeIndexBraceFixer;
 use PhpCsFixer\Fixer\ArrayNotation\NoTrailingCommaInSinglelineArrayFixer;
 use PhpCsFixer\Fixer\ArrayNotation\NoWhitespaceBeforeCommaInArrayFixer;
-use PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer;
 use PhpCsFixer\Fixer\ArrayNotation\TrimArraySpacesFixer;
 use PhpCsFixer\Fixer\Basic\BracesFixer;
 use PhpCsFixer\Fixer\Basic\EncodingFixer;
@@ -153,6 +152,7 @@ use SlevomatCodingStandard\Sniffs\ControlStructures\RequireShortTernaryOperatorS
 use SlevomatCodingStandard\Sniffs\Functions\StaticClosureSniff;
 use SlevomatCodingStandard\Sniffs\Functions\UnusedInheritedVariablePassedToClosureSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\DisallowGroupUseSniff;
+use SlevomatCodingStandard\Sniffs\Namespaces\FullyQualifiedGlobalConstantsSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\FullyQualifiedGlobalFunctionsSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\UselessAliasSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -403,7 +403,6 @@ return static function(ContainerConfigurator $containerConfigurator): void {
             'remove_in_empty_for_expressions' => true,
         ]]);
     $services->set(StandardizeNotEqualsFixer::class);
-    $services->set(TrailingCommaInMultilineArrayFixer::class);
     $services->set(TrimArraySpacesFixer::class);
     $services->set(UnaryOperatorSpacesFixer::class);
 
@@ -435,8 +434,8 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(StaticClosureSniff::class);
     $services->set(UnusedInheritedVariablePassedToClosureSniff::class);
     $services->set(DisallowGroupUseSniff::class);
-//    $services->set(FullyQualifiedGlobalConstantsSniff::class); temporarily turned off because it doesn't work properly
-//    $services->set(FullyQualifiedGlobalFunctionsSniff::class); temporarily turned off because it doesn't work properly (breaks property attributes) 
+    $services->set(FullyQualifiedGlobalConstantsSniff::class);
+    $services->set(FullyQualifiedGlobalFunctionsSniff::class);
     $services->set(UselessAliasSniff::class);
     $services->set(StrictParamFixer::class);
     $services->set(DeclareStrictTypesFixer::class);
