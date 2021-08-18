@@ -229,7 +229,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
                 'const' => ClassAttributesSeparationFixer::SPACING_ONE,
                 'property' => ClassAttributesSeparationFixer::SPACING_ONE,
                 'method' => ClassAttributesSeparationFixer::SPACING_ONE,
-                'trait_import' => ClassAttributesSeparationFixer::SPACING_NONE
+                'trait_import' => ClassAttributesSeparationFixer::SPACING_ONE
             ],
         ]]);
 
