@@ -246,8 +246,8 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(BinaryOperatorSpacesFixer::class)
         ->call('configure', [[
             'operators' => [
-                '=>' => 'single_space',
-                '=' => 'single_space',
+                '=>' => BinaryOperatorSpacesFixer::SINGLE_SPACE,
+                '=' => BinaryOperatorSpacesFixer::SINGLE_SPACE,
             ],
         ]]);
 
@@ -305,7 +305,6 @@ return static function(ContainerConfigurator $containerConfigurator): void {
 
     $services->set(AlignMultilineCommentFixer::class);
     $services->set(ArrayIndentationFixer::class);
-    $services->set(BinaryOperatorSpacesFixer::class);
     $services->set(BlankLineBeforeStatementFixer::class);
     $services->set(BracesFixer::class)
         ->call('configure', [[
