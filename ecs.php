@@ -190,14 +190,6 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(NoUselessElseFixer::class);
     $services->set(SingleQuoteFixer::class);
 
-    $services->set(YodaStyleFixer::class)
-        ->call('configure', [[
-            'equal' => true,
-            'identical' => true,
-            'less_and_greater' => false,
-            'always_move_variable' => true,
-        ]]);
-
     $services->set(OrderedClassElementsFixer::class);
 
     $parameters->set(Option::SKIP, [
@@ -226,10 +218,10 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(ClassAttributesSeparationFixer::class)
         ->call('configure', [[
             'elements' => [
-                'const' => ClassAttributesSeparationFixer::SPACING_ONE,
-                'property' => ClassAttributesSeparationFixer::SPACING_ONE,
-                'method' => ClassAttributesSeparationFixer::SPACING_ONE,
-                'trait_import' => ClassAttributesSeparationFixer::SPACING_ONE
+                'const' => 'one',
+                'property' => 'one',
+                'method' => 'one',
+                'trait_import' => 'none',
             ],
         ]]);
 
@@ -257,7 +249,10 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(BracesFixer::class);
     $services->set(ConstantCaseFixer::class);
     $services->set(ElseifFixer::class);
-    $services->set(FunctionDeclarationFixer::class);
+    $services->set(FunctionDeclarationFixer::class)
+        ->call('configure', [[
+            'closure_function_spacing' => 'none',
+        ]]);
     $services->set(IndentationTypeFixer::class);
     $services->set(LineEndingFixer::class);
     $services->set(LowercaseKeywordsFixer::class);
