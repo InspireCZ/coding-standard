@@ -317,7 +317,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(DeclareStrictTypesFixer::class);
     $services->set(DeclareEqualNormalizeFixer::class)
         ->call('configure', [[
-            'space' => 'none',
+            'space' => 'single',
         ]]);
     $services->set(ElseifFixer::class);
     $services->set(EncodingFixer::class);
