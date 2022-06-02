@@ -44,7 +44,6 @@
       "ignore": ["blockless-at-rules", "pseudo-classes"],
       "ignoreAtRules": ["media", "include"]
     }],
-    "no-unknown-animations": true,
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "font-family-name-quotes": "always-where-recommended",
