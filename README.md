@@ -1,7 +1,3 @@
-# Inspire Coding Standards
+# INSPIRE CZ Coding Standards
 
-Defines coding standard ruleset for INSPIRE CZ PHP developers, aimed at PHP8 libraries and projects.
-
-It uses [Easy coding standard](https://github.com/symplify/easy-coding-standard) and [Slevomat's coding standard]
-(https://github.
-com/slevomat/coding-standard)
+Defines coding standards ruleset for INSPIRE CZ PHP developers. It uses rules from `squizlabs/php_codesniffer`, `slevomat/coding-standard` and custom sniffs.

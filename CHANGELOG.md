@@ -4,17 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.0] - 2022-11-02
-### Changed
-- updated to latest symplify/easy-coding-standard (^11)
-- switched to tabs (over spaces)
-
+## [4.0.0] - 2023-08-16
 ### Added
-- .editorconfig
+- sniffs from `inspirecz/coding-standard-sniffs`
 
-## [3.0.0] - 2021-02-05
+Rereleased v2.5.4 as new major version - for use with Webspire 7 PHP 8.0.
+
+
+## [3.1.1] - 2023-08-16
+### Discontinued
+Major version v3 was intended for Webspire 8. However as we need to develop Webspire 7 packages for PHP 8.2, CS for WSP8 was moved to separate package `webspire8/coding-standard`.
+All tags of v3 will be removed and former v2.5 will be retagged as v4 (so as to avoid conflict if v3 would be reused).
+If coding standard would need to change for PHP 8.2, new version will be released as v5.
+
+## [2.5.4] - 2022-05-27
 ### Changed
-- switched from PHPCS to Easy coding standard
+- updated stylelint configuration to include more rules
+
+## [2.5.0] - 2021-02-10
+### Added
+- first release for PHP 8.0
+- added `public/protected static abstract method` order setting
 
 ## [2.0.2] - 2020-10-07
 ### Changed
