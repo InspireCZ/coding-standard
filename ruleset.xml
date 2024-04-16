@@ -22,6 +22,7 @@
     <rule ref="Generic.Files.InlineHTML" />
     <rule ref="Generic.Formatting.SpaceAfterCast" />
     <rule ref="Generic.Metrics.NestingLevel" />
+	<rule ref="Generic.VersionControl.GitMergeConflict"/>
     <rule ref="Generic.CodeAnalysis.EmptyStatement">
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch" /><!-- empty catch statements are allowed -->
     </rule>
