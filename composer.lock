@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "937811eaba41f39299c0b5d9b11eda2f",
+    "content-hash": "fd4dfc937b598f9324d50bed21c9279f",
     "packages": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -86,16 +86,16 @@
         },
         {
             "name": "inspirecz/coding-standard-sniffs",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InspireCZ/coding-standard-sniffs.git",
-                "reference": "f4c36a6aeead88663703f61a77891184567c2ae9"
+                "reference": "3b5b9dc22246bdfdf38a3959adb80b65a3a6e013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InspireCZ/coding-standard-sniffs/zipball/f4c36a6aeead88663703f61a77891184567c2ae9",
-                "reference": "f4c36a6aeead88663703f61a77891184567c2ae9",
+                "url": "https://api.github.com/repos/InspireCZ/coding-standard-sniffs/zipball/3b5b9dc22246bdfdf38a3959adb80b65a3a6e013",
+                "reference": "3b5b9dc22246bdfdf38a3959adb80b65a3a6e013",
                 "shasum": ""
             },
             "require": {
@@ -123,9 +123,9 @@
             ],
             "support": {
                 "issues": "https://github.com/InspireCZ/coding-standard-sniffs/issues",
-                "source": "https://github.com/InspireCZ/coding-standard-sniffs/tree/v1.1.1"
+                "source": "https://github.com/InspireCZ/coding-standard-sniffs/tree/v1.2.0"
             },
-            "time": "2022-10-26T07:01:30+00:00"
+            "time": "2024-11-06T22:13:30+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -244,12 +244,12 @@
             "version": "3.7.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
                 "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ed8e00df0a83aa96acf703f8c2979ff33341f879",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ed8e00df0a83aa96acf703f8c2979ff33341f879",
                 "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879",
                 "shasum": ""
             },
@@ -294,6 +294,20 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
+            "funding": [
+                {
+                    "url": "https://github.com/PHPCSStandards",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jrfnl",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/php_codesniffer",
+                    "type": "open_collective"
+                }
+            ],
             "time": "2023-02-22T23:07:41+00:00"
         }
     ],
@@ -307,5 +321,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
