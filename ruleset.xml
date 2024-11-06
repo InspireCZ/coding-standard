@@ -99,6 +99,7 @@
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
 
     <rule ref="Inspire.ControlStructures.BlankLines" />
+    <rule ref="Inspire.ControlStructures.ControlStructureSpacing" />
     <rule ref="Inspire.Methods.BlankLinesBeforeReturn" />
     <rule ref="Inspire.Methods.DisallowTracyDumpMethods" />
     <rule ref="Inspire.Classes.EmptyInterface" />

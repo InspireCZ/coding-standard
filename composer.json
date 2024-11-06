@@ -19,7 +19,7 @@
     "require": {
         "php": ">=8.0",
         "squizlabs/php_codesniffer": "^3.2",
-        "inspirecz/coding-standard-sniffs": "^1.0",
+        "inspirecz/coding-standard-sniffs": "^1.2",
         "slevomat/coding-standard": "^8"
     },
     "config": {
