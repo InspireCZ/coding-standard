@@ -102,7 +102,11 @@
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
 
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
+
     <rule ref="Inspire.Methods.DisallowTracyDumpMethods" />
+    <rule ref="Inspire.ControlStructures.ControlStructureSpacing" />
+    <rule ref="Inspire.ControlStructures.InlineCommentSpacing" />
+    <rule ref="Inspire.Classes.EmptyInterface" />
 
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints" />
@@ -130,4 +134,3 @@
     <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
     <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration" />
 </ruleset>
-
