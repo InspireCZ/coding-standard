@@ -104,6 +104,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
 
     <rule ref="Inspire.Methods.DisallowTracyDumpMethods" />
+    <rule ref="Inspire.ControlStructures.DisallowHashComments" />
     <rule ref="Inspire.ControlStructures.ControlStructureSpacing" />
     <rule ref="Inspire.ControlStructures.InlineCommentSpacing" />
     <rule ref="Inspire.Classes.EmptyInterface" />

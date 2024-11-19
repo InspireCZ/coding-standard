@@ -99,6 +99,7 @@
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
 
     <rule ref="Inspire.ControlStructures.BlankLines" />
+    <rule ref="Inspire.ControlStructures.DisallowHashComments" />
     <rule ref="Inspire.ControlStructures.ControlStructureSpacing" />
     <rule ref="Inspire.ControlStructures.InlineCommentSpacing" />
     <rule ref="Inspire.Methods.BlankLinesBeforeReturn" />
