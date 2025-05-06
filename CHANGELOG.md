@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.2.0] - 2025-05-06
+### Added
+To `ruleset.strict.xml`:
+- `SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration`
+- `SlevomatCodingStandard.Functions.RequireTrailingCommaInCall`
+- `SlevomatCodingStandard.Classes.ModernClassNameReference` (forces usage of ::class instead of get_class etc.)
+- `SlevomatCodingStandard.Classes.TraitUseDeclaration` (prohibits specifyng multiple traits in a single use statement)
+- `SlevomatCodingStandard.Whitespaces.DuplicateSpaces` (disallows multiple spaces from various places)
+
+### Removed
+From `ruleset.xml`:
+- `Squiz.WhiteSpace.OperatorSpacing` b/c it mistakingly puts spaces around `|` in `catch (Exception|Throwable)`
+
 ## [4.1.5] - 2025-01-09
 ### Changed
 - updated `stylelintrc.json` for compatibility with stylelint v16
@@ -71,7 +84,18 @@ If coding standard would need to change for PHP 8.2, new version will be release
 ## 1.0.0 - 2018-09-20
 Initial release
 
-[2.0.0]: https://github.com/InspireCZ/coding-standard/compare/2.0.0..1.0.3
-[1.0.3]: https://github.com/InspireCZ/coding-standard/compare/1.0.3..1.0.2
-[1.0.2]: https://github.com/InspireCZ/coding-standard/compare/1.0.2..1.0.1
-[1.0.1]: https://github.com/InspireCZ/coding-standard/compare/1.0.1..1.0.0
+[4.2.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.5...v4.2.0
+[4.1.5]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.4...v4.1.5
+[4.1.4]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.0...v4.1.4
+[4.1.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.0.2...v4.1.0
+[4.0.2]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.0.1...v4.0.2
+[4.0.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.0.0...v4.0.1
+[4.0.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v3.1.1...v4.0.0
+[3.1.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v2.5.4...v3.1.1
+[2.5.4]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v2.5.0...v2.5.4
+[2.5.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v2.0.2...v2.5.0
+[2.0.2]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v2.0.0...v2.0.2
+[2.0.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.3...v2.0.0
+[1.0.3]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.2...v1.0.3
+[1.0.2]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.1...v1.0.2
+[1.0.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/-/tags/v1.0.1
