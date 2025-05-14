@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.2.1] - 2025-05-14
+### Removed
+- deprecated rule `MySource.PHP.EvalObjectFactory`
+### Changed
+- deprecated rule `Squiz.WhiteSpace.LanguageConstructSpacing` has been replaced by rule `Generic.WhiteSpace.LanguageConstructSpacing`
+
 ## [4.2.0] - 2025-05-06
 ### Added
 To `ruleset.strict.xml`:
@@ -84,6 +90,7 @@ If coding standard would need to change for PHP 8.2, new version will be release
 ## 1.0.0 - 2018-09-20
 Initial release
 
+[4.2.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.2.0...v4.2.1
 [4.2.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.5...v4.2.0
 [4.1.5]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.4...v4.1.5
 [4.1.4]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.0...v4.1.4
