@@ -1,4 +1,14 @@
-const stylelint = require("stylelint");
+let stylelint;
+
+try {
+    stylelint = require("stylelint");
+} catch {
+    const {createRequire} = require("module");
+    const {execSync} = require("child_process");
+    const globalRoot = execSync("npm root -g").toString().trim();
+    const globalRequire = createRequire(`${globalRoot}/stylelint/package.json`);
+    stylelint = globalRequire("stylelint");
+}
 
 const ruleName = "custom/no-class-prefix";
 const messages = stylelint.utils.ruleMessages(ruleName, {
@@ -35,7 +45,6 @@ module.exports = stylelint.createPlugin(ruleName, (primaryOption) => {
 
         if (!validOptions) return;
 
-        // Prebuild alternation for regex fallbacks
         const alts = prefixes.map(escapeForRegex).join("|");
         if (!alts) return;
 
@@ -55,14 +64,14 @@ module.exports = stylelint.createPlugin(ruleName, (primaryOption) => {
                 let m;
                 while ((m = re.exec(sel)) !== null) {
                     const start = m.index;
-                    const end = start + m[0].length; // <-- required by Stylelint now
+                    const end = start + m[0].length;
                     const matchedPrefix = whichPrefixIn(m[0], prefixes) || "(unknown)";
 
                     stylelint.utils.report({
                         message: messages.rejected(matchedPrefix, m[0]),
                         node: rule,
                         index: start,
-                        endIndex: end, // <-- add this
+                        endIndex: end,
                         result,
                         ruleName
                     });
