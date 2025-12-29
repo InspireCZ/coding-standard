@@ -53,8 +53,8 @@
     <rule ref="Squiz.Scope.MethodScope" />
     <rule ref="Squiz.Scope.StaticThisUsage" />
     <rule ref="Squiz.WhiteSpace.CastSpacing" />
-    <rule ref="Generic.WhiteSpace.FunctionOpeningBraceSpace" />
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing" />
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
     <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace" />
