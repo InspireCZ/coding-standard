@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.0] - 2026-04-03
+### Changed
+- upgraded `squizlabs/php_codesniffer` to ^4 (possible BC)
+- bumped minimum PHP version to >=8.3 (possible BC)
+- upgraded `inspirecz/coding-standard-sniffs` to ^2
+- changed Composer package type to `phpcodesniffer-standard`
+
+## [4.2.3] - 2025-08-13
+### Fixed
+- fixed `no-class-prefix` stylelint plugin to use global stylelint dependency lookup
+
+## [4.2.2] - 2025-08-13
+### Added
+- added stylelint rule to check usage of disallowed `nwjs_` selector prefix
+- added status badge to README.md
+
 ## [4.2.1] - 2025-05-14
 ### Removed
 - deprecated rule `MySource.PHP.EvalObjectFactory`
@@ -90,6 +106,9 @@ If coding standard would need to change for PHP 8.2, new version will be release
 ## 1.0.0 - 2018-09-20
 Initial release
 
+[4.3.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.2.3...v4.3.0
+[4.2.3]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.2.2...v4.2.3
+[4.2.2]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.2.1...v4.2.2
 [4.2.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.2.0...v4.2.1
 [4.2.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.5...v4.2.0
 [4.1.5]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v4.1.4...v4.1.5
